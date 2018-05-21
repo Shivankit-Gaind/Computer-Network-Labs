@@ -21,7 +21,8 @@ int main() {
         serverAddress.sin_port = htons(1234);
 
         //serverAddress.sin_addr.s_addr = htonl(INADDR_ANY);
-	serverAddress.sin_addr.s_addr = inet_addr("172.18.18.7");
+	serverAddress.sin_addr.s_addr = inet_addr("127.0.0.1");
+
         printf("Server address assigned\n");
         int temp = bind(serverSocket, (struct sockaddr * ) & serverAddress, sizeof(serverAddress));
         if (temp < 0) {
